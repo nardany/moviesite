@@ -1,0 +1,79 @@
+.contactContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.contactForm{
+    width: 100%;
+    max-width: 660px;
+    border: 1px solid #606060;
+    height: 640px;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+.inputNames{
+    display: flex;
+    justify-content: space-between;
+}
+.inputNames input{
+    width: 295px;
+    height: 46px;
+    background-color: #1A1716;
+    border: 1px solid #606060;
+    border-radius: 8px;
+}
+.inputNames p{
+    font-size: 0.85rem;
+     margin-top: 4px;
+}
+.nameInputForm{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.emailForm{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.emailForm input{
+    width: 615px;
+    height: 45px;
+    background-color: #1A1716;
+    border: 1px solid #606060;
+    border-radius: 8px;
+}
+.emailForm p {
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+.messageForm{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.messageForm input{
+    width: 615px;
+    height: 185px;
+    background-color: #1A1716;
+    border: 1px solid #606060;
+    border-radius: 8px;
+}
+.submitForm{
+    display: flex;
+    justify-content: center;
+}
+.submitForm button{
+    background-color: #FF4800;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    color: #FAF9F7;
+    font-size: 14px;
+    cursor: pointer;
+    width: 88px;
+}

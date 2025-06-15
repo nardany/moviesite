@@ -1,0 +1,75 @@
+.navBar{
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 5px;
+}
+.navBarItem{
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+}
+.logo{
+    padding: 10px 12px;
+}
+.item1{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.inputFilm{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 12px;
+}
+.inputFilm input{
+    background-color: #1A1716;
+    border: none;
+    color: #ADA89F;
+    font-size: 14px;
+    font-family: 'SF Pro Display', sans-serif;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    cursor: pointer;
+}
+li:hover{
+    background-color:rgba(93, 93, 92, 0.52);
+}
+li a{
+    text-decoration: none;
+    color: #ADA89F;
+    cursor: pointer;
+}
+.geners{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #ADA89F;
+    margin-left: 12px;
+}
+.item2{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.genersItem{
+    display: flex;
+}
+.gic{
+    width: 200px;
+    height: 1px;
+    background-color: #ADA89F;
+    margin-left: 5px;
+}

@@ -1,0 +1,52 @@
+.about{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.container{
+    width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.description{
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+p{
+    color: #ADA89F;
+    font-size: 14px;
+}
+.sponsor{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+button{
+    border-radius: 999px;
+    width: 120px;
+    border-color:#ADA89F ;
+    background-color: #1A1716;
+    cursor: pointer;
+    padding: 8px 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 14px;
+}
+.submit{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.clipped {
+    width: 60%;
+    max-width: 500px;
+  }
+.clipped img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+}

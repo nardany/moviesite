@@ -1,0 +1,24 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.header span{
+    font-size: 24px;
+    color: #FAF9F7;
+}
+.header button{
+    background-color: #FF4800;
+    border: none;
+    padding: 8px 23px;
+    border-radius: 6px;
+    color: #FAF9F7;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+.line{
+    width: 500px;
+    height: 2px;
+    color: white;
+}
