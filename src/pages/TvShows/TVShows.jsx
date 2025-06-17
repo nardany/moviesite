@@ -1,9 +1,8 @@
+import Data from "../../data/Data"
+import Media from "../../components/FilmsAndTVShowsList/Media"
 
+export default function TVShows() {
+  const tvshow = Data.filter(item => item.type === "tvshow");
 
-export default function TShows(){
-    return(
-        <div>
-            <h1>Hello TVSHows</h1>
-        </div>
-    )
+  return <Media title="TV Show" data={tvshow} />;
 }

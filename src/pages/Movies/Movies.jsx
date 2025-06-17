@@ -1,9 +1,12 @@
+import Data from "../../data/Data"
+import Media from "../../components/FilmsAndTVShowsList/Media"
 
+export default function Movies() {
+  const movies = Data.filter(item => item.type === "movie");
 
-export default function Movies(){
-    return(
-        <div>
-            <h1>Helllo Movies</h1>
-        </div>
-    )
+  return(
+  <div>
+      <Media title="Movies" data={movies} />
+  </div>  
+  ) 
 }
