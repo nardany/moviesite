@@ -1,75 +1,124 @@
-.navBar{
+.navBar {
     margin-left: 5px;
     display: flex;
     flex-direction: column;
     gap: 15px;
     padding: 5px;
 }
-.navBarItem{
+
+.navBarItem {
     display: flex;
     flex-direction: column;
     gap: 34px;
 }
-.logo{
+
+.logo {
     padding: 10px 12px;
 }
-.item1{
+
+.item1 {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
-.inputFilm{
+
+.inputFilm {
     display: flex;
     gap: 10px;
     align-items: center;
     padding: 10px 12px;
 }
-.inputFilm input{
+
+.inputFilm input {
     background-color: #1A1716;
     border: none;
     color: #ADA89F;
     font-size: 14px;
     font-family: 'SF Pro Display', sans-serif;
 }
-ul{
+
+ul {
     list-style-type: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-li{
+
+li {
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 10px 12px;
     cursor: pointer;
 }
-li:hover{
-    background-color:rgba(93, 93, 92, 0.52);
+
+li:hover {
+    background-color: rgba(93, 93, 92, 0.52);
 }
-li a{
+
+li a {
     text-decoration: none;
     color: #ADA89F;
     cursor: pointer;
 }
-.geners{
+
+.geners {
     display: flex;
     align-items: center;
     gap: 5px;
     color: #ADA89F;
     margin-left: 12px;
 }
-.item2{
+
+.item2 {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
-.genersItem{
+
+.genersItem {
     display: flex;
 }
-.gic{
-    width: 200px;
-    height: 1px;
-    background-color: #ADA89F;
-    margin-left: 5px;
+
+.burger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    color: white;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+@media (max-width: 800px) {
+    .burger {
+        display: block;
+    }
+
+    .navBar {
+        position: fixed;
+        left: -250px;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        background-color: #1A1716;
+        z-index: 1002;
+        transition: left 0.3s ease;
+        padding: 20px;
+    }
+
+    .navBar.open {
+        left: 0;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 1000;
+    }
 }

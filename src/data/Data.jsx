@@ -73,24 +73,24 @@ const Data = [
     type: "tvshow",
     genre: "action",
     year: 2019,
-    image : TheMandalorian
+    image: TheMandalorian,
   },
-  { 
-    id: 12, 
-    title: "Arrow", 
-    type: "tvshow", 
-    genre: "action", 
+  {
+    id: 12,
+    title: "Arrow",
+    type: "tvshow",
+    genre: "action",
     year: 2012,
-    image : Arrow
-   },
-  { 
-    id: 13, 
-    title: "Vikings", 
-    type: "tvshow", 
-    genre: "action", 
+    image: Arrow,
+  },
+  {
+    id: 13,
+    title: "Vikings",
+    type: "tvshow",
+    genre: "action",
     year: 2013,
-    image : Vikings
-   },
+    image: Vikings,
+  },
 
   {
     id: 21,
@@ -123,24 +123,24 @@ const Data = [
     type: "tvshow",
     genre: "comedy",
     year: 2013,
-    image : Brooklyn
+    image: Brooklyn,
   },
-  { 
-    id: 32, 
-    title: "Friends", 
-    type: "tvshow", 
-    genre: "comedy", 
+  {
+    id: 32,
+    title: "Friends",
+    type: "tvshow",
+    genre: "comedy",
     year: 1994,
-    image : Friends
-   },
-  { 
-    id: 33, 
-    title: "The Office", 
-    type: "tvshow", 
-    genre: "comedy", 
+    image: Friends,
+  },
+  {
+    id: 33,
+    title: "The Office",
+    type: "tvshow",
+    genre: "comedy",
     year: 2005,
-    image : TheOffice
-   },
+    image: TheOffice,
+  },
 
   {
     id: 41,
@@ -167,30 +167,30 @@ const Data = [
     image: ABeautifulMind,
   },
 
-  { 
-    id: 51, 
-    title: "Breaking Bad", 
-    type: "tvshow", 
-    genre: "drama", 
+  {
+    id: 51,
+    title: "Breaking Bad",
+    type: "tvshow",
+    genre: "drama",
     year: 2008,
-    image : BreakingBad
-   },
-  { 
-    id: 52, 
-    title: "The Crown", 
-    type: "tvshow", 
-    genre: "drama", 
+    image: BreakingBad,
+  },
+  {
+    id: 52,
+    title: "The Crown",
+    type: "tvshow",
+    genre: "drama",
     year: 2016,
-    image : TheCrown
-   },
-  { 
-    id: 53, 
-    title: "This Is Us", 
-    type: "tvshow", 
-    genre: "drama", 
+    image: TheCrown,
+  },
+  {
+    id: 53,
+    title: "This Is Us",
+    type: "tvshow",
+    genre: "drama",
     year: 2016,
-    image : ThisIsUs
-   },
+    image: ThisIsUs,
+  },
   {
     id: 61,
     title: "Gone Girl",
@@ -215,13 +215,13 @@ const Data = [
     year: 1995,
     image: Seven,
   },
-  { 
+  {
     id: 71,
-    title: "You", 
-    type: "tvshow", 
-    genre: "thriller", 
+    title: "You",
+    type: "tvshow",
+    genre: "thriller",
     year: 2018,
-    image :  You
+    image: You,
   },
   {
     id: 72,
@@ -229,16 +229,16 @@ const Data = [
     type: "tvshow",
     genre: "thriller",
     year: 2017,
-    image : Mindhunter
+    image: Mindhunter,
   },
-  { 
-    id: 73, 
-    title: "Dexter", 
-    type: "tvshow", 
-    genre: "thriller", 
+  {
+    id: 73,
+    title: "Dexter",
+    type: "tvshow",
+    genre: "thriller",
     year: 2006,
-    image : Dexter
-   },
+    image: Dexter,
+  },
   {
     id: 81,
     title: "Inception",
@@ -270,23 +270,23 @@ const Data = [
     type: "tvshow",
     genre: "sci-fi",
     year: 2016,
-    image : StrangerThings
+    image: StrangerThings,
   },
-  { 
-    id: 92, 
-    title: "Dark", 
-    type: "tvshow", 
-    genre: "sci-fi", 
+  {
+    id: 92,
+    title: "Dark",
+    type: "tvshow",
+    genre: "sci-fi",
     year: 2017,
-    image :  Dark
+    image: Dark,
   },
-  { 
-    id: 93, 
-    title: "Westworld", 
-    type: "tvshow", 
-    genre: "sci-fi", 
+  {
+    id: 93,
+    title: "Westworld",
+    type: "tvshow",
+    genre: "sci-fi",
     year: 2016,
-    image :  Westworld
+    image: Westworld,
   },
   {
     id: 101,
@@ -319,7 +319,7 @@ const Data = [
     type: "tvshow",
     genre: "fantasy",
     year: 2011,
-    image : GOT
+    image: GOT,
   },
   {
     id: 112,
@@ -327,7 +327,7 @@ const Data = [
     type: "tvshow",
     genre: "fantasy",
     year: 2019,
-    image : TheWitcher
+    image: TheWitcher,
   },
   {
     id: 113,
@@ -335,7 +335,7 @@ const Data = [
     type: "tvshow",
     genre: "fantasy",
     year: 2021,
-    image : ShadowAndBone
+    image: ShadowAndBone,
   },
 
   {
@@ -369,7 +369,7 @@ const Data = [
     type: "tvshow",
     genre: "horror",
     year: 2018,
-    image : TheHaunting
+    image: TheHaunting,
   },
   {
     id: 132,
@@ -377,7 +377,7 @@ const Data = [
     type: "tvshow",
     genre: "horror",
     year: 2011,
-    image : AmericanHorror
+    image: AmericanHorror,
   },
   {
     id: 133,
@@ -385,7 +385,7 @@ const Data = [
     type: "tvshow",
     genre: "horror",
     year: 2013,
-    image : BatesMotel
+    image: BatesMotel,
   },
 ];
 export default Data;
