@@ -8,7 +8,6 @@
     width: 100%;
     max-width: 660px;
     border: 1px solid #606060;
-    height: 640px;
     padding: 15px;
     border-radius: 8px;
     display: flex;
@@ -70,10 +69,9 @@
 .submitForm button{
     background-color: #FF4800;
     border: none;
-    padding: 10px;
+    padding: 8px 12px;
     border-radius: 6px;
     color: #FAF9F7;
     font-size: 14px;
     cursor: pointer;
-    width: 88px;
 }

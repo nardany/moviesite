@@ -5,19 +5,16 @@
 }
 .app {
     display: flex;
-    height: 100vh;
+    height: auto;
   }  
-  
 .mainArea {
     flex: 1;
     display: flex;
     flex-direction: column;
 }
-
 .mainArea > * {
     padding: 10px;
 }
-  
 .mainContent {
     flex: 1;
     overflow-y: auto;

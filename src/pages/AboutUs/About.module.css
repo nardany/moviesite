@@ -1,52 +1,76 @@
-.about{
-    margin-top: 25px;
+.about {
+    margin-top: 10px;
     display: flex;
-    justify-content: space-between;
-}
-.container{
-    width: 480px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     gap: 30px;
-}
-.description{
+  }
+  .description {
     display: flex;
     gap: 15px;
     flex-direction: column;
-}
-p{
+  }
+  
+  p {
     color: #ADA89F;
-    font-size: 14px;
-}
-.sponsor{
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .sponsor {
     display: flex;
     flex-direction: column;
     gap: 15px;
-}
-button{
+  }
+  
+  button {
     border-radius: 999px;
-    width: 120px;
-    border-color:#ADA89F ;
+    width: fit-content;
+    border: 1px solid #ADA89F;
     background-color: #1A1716;
     cursor: pointer;
     padding: 8px 13px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     font-size: 14px;
-}
-.submit{
+    gap: 8px;
+    color: #ADA89F;
+  }
+  
+  .submit {
     display: flex;
     flex-direction: column;
     gap: 15px;
-}
-.clipped {
-    width: 60%;
-    max-width: 500px;
   }
-.clipped img {
+  
+  .clipped {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .clipped img {
     width: 100%;
-    max-width: 400px;
     height: auto;
     display: block;
-}
+    border-radius: 10px;
+    object-fit: cover;
+  }
