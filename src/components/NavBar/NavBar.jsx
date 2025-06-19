@@ -1,5 +1,6 @@
 import style from "./NavBar.module.css";
-import { NavLink } from "react-router-dom";
+import { useLocation, NavLink } from "react-router-dom";
+const genres = ["Action", "Horror", "Comedy", "Drama", "Fantasy", "Sci-Fi","Thriller"];
 import {
   Logo,
   Search,
@@ -10,6 +11,9 @@ import {
 } from "../../assets/Icons";
 
 export default function NavBar({ isOpen, setIsOpen }) {
+  const { pathname } = useLocation();
+
+  const basePath = pathname.includes("tvshows") ? "tvshows" : "movies";
   const handleNavClick = () => setIsOpen(false);
   return (
     <>
@@ -51,13 +55,11 @@ export default function NavBar({ isOpen, setIsOpen }) {
             </div>
             <div className={style.genersItem}>
               <ul>
-                <li><NavLink>Action</NavLink></li>
-                <li><NavLink>Comedy</NavLink></li>
-                <li><NavLink>Drama</NavLink></li>
-                <li><NavLink>Thriller</NavLink></li>
-                <li><NavLink>Sci-Fi</NavLink></li>
-                <li><NavLink>Fantasy</NavLink></li>
-                <li><NavLink>Horror</NavLink></li>
+              {genres.map((g) => (
+        <li key={g}>
+          <NavLink to={`/${basePath}/${g.toLowerCase()}`}>{g}</NavLink>
+        </li>
+      ))}
               </ul>
             </div>
           </div>

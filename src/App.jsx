@@ -3,7 +3,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  NavLink,
 } from "react-router-dom";
 import style from "./App.module.css";
 import NavBar from "./components/NavBar/NavBar";
@@ -13,6 +12,7 @@ import About from "./pages/AboutUs/About"
 import Movies from "./pages/Movies/Movies"
 import TVShows from "./pages/TvShows/TVShows"
 import Contact from "./pages/Contact/Contact"
+import Genre from "./pages/Genre/Genere"
 function App() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
@@ -32,6 +32,8 @@ function App() {
               <Route path="/movies" element={<Movies />} />
               <Route path="/tvshows" element={<TVShows />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/movies/:genre" element={<Genre />} />
+              <Route path="/tvshows/:genre" element={<Genre />} />
             </Routes>
           </div>
         </div>
