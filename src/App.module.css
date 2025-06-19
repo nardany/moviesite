@@ -19,3 +19,8 @@
     flex: 1;
     overflow-y: auto;
 }
+@media (max-width: 800px) {
+    .app{
+        display: block;
+    }
+}

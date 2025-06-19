@@ -8,18 +8,11 @@ import {
   Movies,
   TVShows,
 } from "../../assets/Icons";
-import { useState } from "react";
 
-export default function NavBar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const handleNavClick = () => {
-    setIsOpen(false); // 
-  };
+export default function NavBar({ isOpen, setIsOpen }) {
+  const handleNavClick = () => setIsOpen(false);
   return (
     <>
-        <button className={style.burger} onClick={() => setIsOpen(!isOpen)}>
-        ☰
-      </button>
       {isOpen && <div className={style.overlay} onClick={() => setIsOpen(false)} />}
       <div className={`${style.navBar} ${isOpen ? style.open : ""}`}>
         <div className={style.logo}>

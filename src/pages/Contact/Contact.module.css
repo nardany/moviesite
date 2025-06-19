@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
 }
 .contactForm{
     width: 100%;
@@ -19,11 +18,10 @@
     justify-content: space-between;
 }
 .inputNames input{
-    width: 295px;
-    height: 46px;
-    background-color: #1A1716;
+    background: none;
     border: 1px solid #606060;
     border-radius: 8px;
+    padding: 13px 50px;
 }
 .inputNames p{
     font-size: 0.85rem;
@@ -40,9 +38,8 @@
     gap: 16px;
 }
 .emailForm input{
-    width: 615px;
-    height: 45px;
-    background-color: #1A1716;
+    padding: 13px 243px;
+    background: none;
     border: 1px solid #606060;
     border-radius: 8px;
 }
@@ -56,9 +53,8 @@
     gap: 16px;
 }
 .messageForm input{
-    width: 615px;
-    height: 185px;
-    background-color: #1A1716;
+    padding: 70px 240px;
+    background: none;
     border: 1px solid #606060;
     border-radius: 8px;
 }
@@ -75,3 +71,27 @@
     font-size: 14px;
     cursor: pointer;
 }
+@media (max-width: 900px) {
+    .contactForm {
+      padding: 10px;
+      gap: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .inputNames {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .inputNames input,
+    .emailForm input,
+    .messageForm input {
+      padding: 13px 15px;
+      width: 100%;
+    }
+  
+    .messageForm input {
+      padding: 50px 15px;
+    }
+  }

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -13,14 +14,17 @@ import Movies from "./pages/Movies/Movies"
 import TVShows from "./pages/TvShows/TVShows"
 import Contact from "./pages/Contact/Contact"
 function App() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
   return (
     <Router>
       <div className={style.app}>
         <div className={style.sidebar}>
-          <NavBar />
+        <NavBar isOpen={isNavOpen} setIsOpen={setIsNavOpen} />
         </div>
         <div className={style.mainArea}>
-          <Header />
+          
+          <Header setIsNavOpen={setIsNavOpen}  />
           <div className={style.mainContent}>
           <Routes>
               <Route path="/" element={<Main />} />
