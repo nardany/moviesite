@@ -13,6 +13,8 @@ import Movies from "./pages/Movies/Movies"
 import TVShows from "./pages/TvShows/TVShows"
 import Contact from "./pages/Contact/Contact"
 import Genre from "./pages/Genre/Genere"
+import MoviesPage from "./pages/MoviesPage/MoviesPage"; 
+import MovieDetails from "./pages/MovieDetails/MovieDetails"
 function App() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
@@ -34,6 +36,8 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/movies/:genre" element={<Genre />} />
               <Route path="/tvshows/:genre" element={<Genre />} />
+              <Route path="/all-movies" element={<MoviesPage />} />
+              <Route path="/watch/:id" element={<MovieDetails />} />
             </Routes>
           </div>
         </div>

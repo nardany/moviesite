@@ -1,16 +1,21 @@
-import style from "./Media.module.css"
+// ✅ MediaList.jsx
+import style from "./Media.module.css";
+import { NavLink } from "react-router-dom";
+
 export default function MediaList({ data }) {
-    return (
-      <div>
-        <div className={style.container}>
-          {data.map(item => (
-            <div key={item.id} className={style.items}>
-              <img src={item.image} alt="" />
-              <h4>{item.title}</h4>
-              <p>{item.year}</p>
-            </div>
-          ))}
-        </div>
+  return (
+    <div>
+      <div className={style.container}>
+        {data.map((item) => (
+          <div key={item.id} className={style.items}>
+           <NavLink to={`/watch/${item.id}`}>
+            <img src={item.image} alt={item.title} />
+           </NavLink>
+            <h4>{item.title}</h4>
+            <p>{item.year}</p>
+          </div>
+        ))}
       </div>
-    );
-  }
+    </div>
+  );
+}
