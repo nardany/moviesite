@@ -79,6 +79,40 @@ li a {
 .genersItem {
     display: flex;
 }
+
+.inputFilm {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 12px;
+  }
+  
+  .searchResults {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #1A1716;
+    color: #ADA89F;
+    max-height: 180px;
+    overflow-y: auto;
+    border: 1px solid #444;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    z-index: 999;
+  }
+  
+  .resultItem {
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .resultItem:hover {
+    background-color: rgba(93, 93, 92, 0.52);
+  }
+
 @media (max-width: 800px) {
     .burger {
         display: block;

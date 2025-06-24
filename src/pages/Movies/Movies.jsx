@@ -8,7 +8,7 @@ export default function Movies() {
     fetch("http://localhost:5000/api/movies")
       .then((res) => res.json())
       .then((data) => {
-        const filtered = data.filter(item => item.type === "movie");
+        const filtered = data.filter((item) => item.type === "movie");
         setMovies(filtered);
       })
       .catch((err) => console.error("Error fetching movies:", err));
