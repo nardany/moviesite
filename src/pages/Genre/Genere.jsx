@@ -24,5 +24,9 @@ export default function Genre() {
       .catch((err) => console.error("Error fetching genre:", err));
   }, [genre, location.pathname]);
 
-  return <Media data={filteredData} />;
+  return (
+    <div>
+      <Media data={filteredData} />
+    </div>
+  )
 }

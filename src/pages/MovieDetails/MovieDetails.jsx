@@ -5,7 +5,6 @@ import style from "./MovieDetails.module.css";
 export default function MovieDetails() {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
-
   useEffect(() => {
     fetch("http://localhost:5000/api/movies")
       .then((res) => res.json())
@@ -28,7 +27,7 @@ export default function MovieDetails() {
         </div>
       </div>
       <div className={style.videoBox}>
-        <video width="100%" controls>
+        <video controls>
           <source src={movie.videoUrl} type="video/mp4" />
           Your browser does not support the video tag.
         </video>

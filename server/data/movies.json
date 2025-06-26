@@ -5,7 +5,8 @@
     "type": "movie",
     "genre": "action",
     "year": 2015,
-    "image": "/images/MadMax.jpg"
+    "image": "/images/MadMax.jpg",
+    "videoUrl" : "/videos/MadMax.mp4"
   },
   {
     "id": 2,
@@ -13,7 +14,9 @@
     "type": "movie",
     "genre": "action",
     "year": 2014,
-    "image": "/images/JohnWick.jpg"
+    "image": "/images/JohnWick.jpg",
+    "videoUrl" : "/videos/JohnWick.mp4"
+
   },
   {
     "id": 3,
@@ -21,7 +24,8 @@
     "type": "movie",
     "genre": "action",
     "year": 2000,
-    "image": "/images/Gladiator.jpg"
+    "image": "/images/Gladiator.jpg",
+    "videoUrl" : "/videos/Gladiator.mp4"
   },
   {
     "id": 11,
@@ -334,5 +338,14 @@
     "genre": "horror",
     "year": 2013,
     "image": "/images/BatesMotel.jpg"
+  },
+  {
+    "id": 1750874591438,
+    "title": "a",
+    "genre": "Horror",
+    "type": "movie",
+    "year": 1923,
+    "image": "/images/1750874591023-a5d71ee4bc4b91a1f76b1b601a59f5c646e26795.png",
+    "videoUrl": "/videos/1750874591044-IMG_4582.MOV"
   }
 ]

@@ -1,6 +1,6 @@
 import style from "./About.module.css";
-import { Sponsor,Submit, } from "../../assets/Icons";
-import about from "../../assets/about.jpg"
+import { Sponsor, Submit } from "../../assets/Icons";
+import about from "../../assets/about.jpg";
 export default function About() {
   return (
     <div className={style.about}>
@@ -40,14 +40,14 @@ export default function About() {
             Join us in shaping design excellence!
           </p>
           <button>
-            Submit 
-            <Submit/>
+            Submit
+            <Submit />
           </button>
         </div>
       </div>
-        <div className={style.clipped}>
-                <img src={about} alt="" />
-        </div>
+      <div className={style.clipped}>
+        <img src={about} alt="" />
+      </div>
     </div>
   );
 }

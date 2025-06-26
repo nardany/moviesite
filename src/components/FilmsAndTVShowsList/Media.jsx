@@ -1,4 +1,3 @@
-// ✅ MediaList.jsx
 import style from "./Media.module.css";
 import { NavLink } from "react-router-dom";
 

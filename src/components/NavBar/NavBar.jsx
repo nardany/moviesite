@@ -1,16 +1,17 @@
 import { useLocation, NavLink, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import style from "./NavBar.module.css";
-import {
-  Logo,
-  Search,
-  Home,
-  About,
-  Movies,
-  TVShows,
-} from "../../assets/Icons";
+import { Logo, Search, Home, About, Movies, TVShows } from "../../assets/Icons";
 
-const genres = ["Action", "Horror", "Comedy", "Drama", "Fantasy", "Sci-Fi", "Thriller"];
+const genres = [
+  "Action",
+  "Horror",
+  "Comedy",
+  "Drama",
+  "Fantasy",
+  "Sci-Fi",
+  "Thriller",
+];
 
 export default function NavBar({ isOpen, setIsOpen }) {
   const { pathname } = useLocation();
@@ -45,13 +46,15 @@ export default function NavBar({ isOpen, setIsOpen }) {
   const handleNavClick = () => setIsOpen(false);
 
   return (
-    <>
-      {isOpen && <div className={style.overlay} onClick={() => setIsOpen(false)} />}
+    <div>
+      {isOpen && (
+        <div className={style.overlay} onClick={() => setIsOpen(false)} />
+      )}
       <div className={`${style.navBar} ${isOpen ? style.open : ""}`}>
         <div className={style.logo}>
-        <NavLink to="/" onClick={handleNavClick}>
-          <Logo />
-        </NavLink>
+          <NavLink to="/" onClick={handleNavClick}>
+            <Logo />
+          </NavLink>
         </div>
         <div className={style.navBarItem}>
           <div className={style.item1}>
@@ -62,39 +65,66 @@ export default function NavBar({ isOpen, setIsOpen }) {
                 placeholder="Search"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                />
-                {results.length > 0 && (
-                  <div className={style.searchResults}>
-                    {results.map((movie) => (
-                      <div
-                        key={movie.id}
-                        className={style.resultItem}
-                        onClick={() => handleSelectMovie(movie.id)}
-                      >
-                        🎬 {movie.title}
-                      </div>
-                    ))}
-                  </div>
-                )}
+              />
+              {results.length > 0 && (
+                <div className={style.searchResults}>
+                  {results.map((movie) => (
+                    <div
+                      key={movie.id}
+                      className={style.resultItem}
+                      onClick={() => handleSelectMovie(movie.id)}
+                    >
+                      🎬 {movie.title}
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
 
-
             <ul>
-              <li>
-                <div><Home /></div>
-                <NavLink to="/" onClick={handleNavClick}>Home</NavLink>
+              <li
+                onClick={() => {
+                  handleNavClick();
+                  navigate("/");
+                }}
+              >
+                <div>
+                  <Home />
+                </div>
+                <span className={style.navText}>Home</span>
               </li>
-              <li>
-                <div><About /></div>
-                <NavLink to="/about" onClick={handleNavClick}>About Us</NavLink>
+              <li
+                onClick={() => {
+                  handleNavClick();
+                  navigate("/about");
+                }}
+              >
+                <div>
+                  <About />
+                </div>
+                <span className={style.navText}>About Us</span>
               </li>
-              <li>
-                <div><Movies /></div>
-                <NavLink to="/movies" onClick={handleNavClick}>Movies</NavLink>
+              <li
+                onClick={() => {
+                  handleNavClick();
+                  navigate("/movies");
+                }}
+              >
+                <div>
+                  <Movies />
+                </div>
+                <span className={style.navText}>Movies</span>
               </li>
-              <li>
-                <div><TVShows /></div>
-                <NavLink to="/tvshows" onClick={handleNavClick}>TV Shows</NavLink>
+              <li
+                onClick={() => {
+                  handleNavClick();
+                  navigate("/tvshows");
+                }}
+              >
+                <div>
+                  <TVShows />
+                </div>
+                <span className={style.navText}>TV Shows</span>
               </li>
             </ul>
           </div>
@@ -104,10 +134,14 @@ export default function NavBar({ isOpen, setIsOpen }) {
             <div className={style.genersItem}>
               <ul>
                 {genres.map((g) => (
-                  <li key={g}>
-                    <NavLink to={`/${basePath}/${g.toLowerCase()}`} onClick={handleNavClick}>
-                      {g}
-                    </NavLink>
+                  <li
+                    key={g}
+                    onClick={() => {
+                      handleNavClick();
+                      navigate(`/${basePath}/${g.toLowerCase()}`);
+                    }}
+                  >
+                    <span className={style.navText}>{g}</span>
                   </li>
                 ))}
               </ul>
@@ -115,6 +149,6 @@ export default function NavBar({ isOpen, setIsOpen }) {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

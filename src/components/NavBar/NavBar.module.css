@@ -56,10 +56,13 @@ li:hover {
     background-color: rgba(93, 93, 92, 0.52);
 }
 
-li a {
-    text-decoration: none;
+.navText {
     color: #ADA89F;
-    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'SF Pro Display', sans-serif;
+    pointer-events: none;
+    /* որպեսզի span-ը չընդունի սեղմում */
 }
 
 .geners {
@@ -86,9 +89,13 @@ li a {
     gap: 10px;
     align-items: center;
     padding: 10px 12px;
-  }
-  
-  .searchResults {
+}
+
+input:focus {
+    outline: none;
+}
+
+.searchResults {
     position: absolute;
     top: 100%;
     left: 0;
@@ -101,17 +108,17 @@ li a {
     border-top: none;
     border-radius: 0 0 4px 4px;
     z-index: 999;
-  }
-  
-  .resultItem {
+}
+
+.resultItem {
     padding: 8px 12px;
     cursor: pointer;
     font-size: 14px;
-  }
-  
-  .resultItem:hover {
+}
+
+.resultItem:hover {
     background-color: rgba(93, 93, 92, 0.52);
-  }
+}
 
 @media (max-width: 800px) {
     .burger {
