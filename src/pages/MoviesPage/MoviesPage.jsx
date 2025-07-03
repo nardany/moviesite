@@ -4,7 +4,7 @@ export default function MoviesPage() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/movies")
+    fetch("http://localhost:8080/api/movies")
       .then((res) => res.json())
       .then((data) => setMovies(data))
       .catch((err) => console.error(err));

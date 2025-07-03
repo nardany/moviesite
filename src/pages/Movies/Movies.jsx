@@ -5,7 +5,7 @@ export default function Movies() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/movies")
+    fetch("http://localhost:8080/api/movies")
       .then((res) => res.json())
       .then((data) => {
         const filtered = data.filter((item) => item.type === "movie");

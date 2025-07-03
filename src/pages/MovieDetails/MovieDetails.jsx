@@ -6,7 +6,7 @@ export default function MovieDetails() {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
   useEffect(() => {
-    fetch("http://localhost:5000/api/movies")
+    fetch("http://localhost:8080/api/movies")
       .then((res) => res.json())
       .then((data) => {
         const found = data.find(item => item.id === Number(id));
@@ -19,7 +19,7 @@ export default function MovieDetails() {
   return (
     <div className={style.container}>
       <div className={style.details}>
-        <img src={movie.image} alt={movie.title} />
+        <img src={`http://localhost:8080${movie.image}`} alt={movie.title} />
         <div>
           <h2>{movie.title}</h2>
           <p>Year: {movie.year}</p>
@@ -28,7 +28,7 @@ export default function MovieDetails() {
       </div>
       <div className={style.videoBox}>
         <video controls>
-          <source src={movie.videoUrl} type="video/mp4" />
+          <source src={`http://localhost:8080${movie.videoUrl}`} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>

@@ -8,7 +8,7 @@ export default function MediaList({ data }) {
         {data.map((item) => (
           <div key={item.id} className={style.items}>
            <NavLink to={`/watch/${item.id}`}>
-            <img src={item.image} alt={item.title} />
+            <img src={`http://localhost:8080${item.image}`} alt={item.title} />
            </NavLink>
             <h4>{item.title}</h4>
             <p>{item.year}</p>

@@ -2,39 +2,28 @@ import { useState } from "react";
 import style from "./AdminPanel.module.css";
 
 export default function AdminPanel() {
-  const [formData, setFormData] = useState({
-    title: "",
-    genre: "",
-    year: "",
-    type: "movie",
-    image: null,
-    video: null,
-  });
-
-  const handleChange = (e) => {
-    const { name, value, files } = e.target;
-    if (name === "image" || name === "video") {
-      setFormData({ ...formData, [name]: files[0] });
-    } else {
-      setFormData({ ...formData, [name]: value });
-    }
-  };
+  const [status, setStatus] = useState({ message: "", type: "" });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const formData = new FormData(e.target);
-
+    const form = new FormData(e.target);
     try {
-      const res = await fetch("http://localhost:5000/api/movies", {
+      const res = await fetch("http://localhost:8080/api/movies", {
         method: "POST",
-        body: formData,
+        body: form,
       });
 
+      if (!res.ok) {
+        throw new Error(`Սերվերի սխալ: ${res.status}`);
+      }
+
       const data = await res.json();
-      console.log("✅ Upload successful:", data);
+      console.log("Upload successful:", data);
+      setStatus({ message: "Ֆիլմը հաջողությամբ ավելացվեց", type: "success" });
+      e.target.reset();
     } catch (err) {
-      console.error("❌ Upload error:", err);
+      console.error("Upload error:", err);
+      setStatus({ message: "Սխալ տեղի ունեցավ ։ Խնդրում ենք փորձել կրկին։", type: "error" });
     }
   };
 
@@ -47,8 +36,6 @@ export default function AdminPanel() {
           type="text"
           name="title"
           placeholder="Վերնագիր"
-          value={formData.title}
-          onChange={handleChange}
           required
         />
         <br />
@@ -57,8 +44,6 @@ export default function AdminPanel() {
           type="text"
           name="genre"
           placeholder="Ժանր"
-          value={formData.genre}
-          onChange={handleChange}
           required
         />
         <br />
@@ -66,12 +51,10 @@ export default function AdminPanel() {
           type="number"
           name="year"
           placeholder="Տարի"
-          value={formData.year}
-          onChange={handleChange}
           required
         />
         <br />
-        <select name="type" value={formData.type} onChange={handleChange}>
+        <select name="type">
           <option value="movie">Ֆիլմ</option>
           <option value="tvshow">Սերիալ</option>
         </select>
@@ -81,7 +64,6 @@ export default function AdminPanel() {
           type="file"
           name="image"
           accept="image/*"
-          onChange={handleChange}
           required
         />
         <br />
@@ -90,7 +72,6 @@ export default function AdminPanel() {
           type="file"
           name="video"
           accept="video/*"
-          onChange={handleChange}
           required
         />
         <br />
@@ -98,6 +79,23 @@ export default function AdminPanel() {
           <button type="submit">Ավելացնել</button>
         </div>
       </form>
+
+      {status.message && (
+        <p
+          style={{
+            marginTop: "20px",
+            padding: "10px",
+            color: status.type === "success" ? "#0f5132" : "#842029",
+            backgroundColor: status.type === "success" ? "#d1e7dd" : "#f8d7da",
+            border: `1px solid ${status.type === "success" ? "#badbcc" : "#f5c2c7"}`,
+            borderRadius: "8px",
+            fontWeight: "bold",
+            textAlign: "center",
+          }}
+        >
+          {status.message}
+        </p>
+      )}
     </div>
   );
 }

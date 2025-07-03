@@ -23,7 +23,7 @@ export default function NavBar({ isOpen, setIsOpen }) {
 
   useEffect(() => {
     if (searchTerm.trim()) {
-      fetch("http://localhost:5000/api/movies")
+      fetch("http://localhost:8080/api/movies")
         .then((res) => res.json())
         .then((data) => {
           const filtered = data.filter((movie) =>

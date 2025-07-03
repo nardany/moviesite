@@ -11,7 +11,7 @@ export default function Genre() {
     const path = location.pathname.toLowerCase();
 
     const type = path.includes("/movies/") ? "movie" : "tvshow";
-    fetch("http://localhost:5000/api/movies")
+    fetch("http://localhost:8080/api/movies")
       .then((res) => res.json())
       .then((data) => {
         const filtered = data.filter(

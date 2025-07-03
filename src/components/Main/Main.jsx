@@ -8,7 +8,7 @@ export default function Main() {
   const [tvshows, setTvShows] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/movies")
+    fetch("http://localhost:8080/api/movies")
       .then((res) => res.json())
       .then((data) => {
         const movieItems = data.filter(item => item.type === "movie").slice(0, 8);
